@@ -1,0 +1,35 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "optimizacion",
+			"command": "cl.exe",
+			"args": [
+				"/Zi",
+				"/EHsc",
+				"/Fe:",
+				"${fileDirname}\\debug\\${fileBasenameNoExtension}.exe",
+				"${file}",
+				"${workspaceFolder}\\linalg\\linalg.cpp",
+				"${workspaceFolder}\\linalg\\matrix.cpp",
+				"${workspaceFolder}\\utilities\\utilities.cpp",
+				"${workspaceFolder}\\problem\\problem.cpp",
+				"${workspaceFolder}\\golden\\golden.cpp",
+				"${workspaceFolder}\\steppest\\steppest_descent.cpp",
+				"${workspaceFolder}\\newton\\newton.cpp",
+				"${workspaceFolder}\\levmar\\levenberg_marquardt.cpp",
+				"${workspaceFolder}\\conjugate\\conjugate_gradient.cpp",
+				"${workspaceFolder}\\powell\\powell.cpp",
+			],
+			"options": {
+				"cwd": "${workspaceFolder}\\debug"
+			},
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build",
+			"detail": "compiler: cl.exe"
+		}
+	]
+}
